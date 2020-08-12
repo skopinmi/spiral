@@ -2,6 +2,9 @@ public class Spiral {
 
     public static void main(String[] args) {
         int [] [] result = makeSpiral(5, 6);
+
+        /* выводит в консоль */
+
         for (int[] a : result) {
             for (int b: a) {
                 System.out.print(b + "|");
@@ -9,6 +12,7 @@ public class Spiral {
             System.out.println("");
         }
     }
+
     public static int [][] makeSpiral (int x, int y) {
         int [][] result = new int[y][x];
         int count = 1;
@@ -21,6 +25,11 @@ public class Spiral {
         int inPer = 0;
 
         for (int ii = 0; ii < countPer; ii++) {
+
+        /* проходит и заполняет массив по периметру
+            inPer переводит на порядок к центру
+        * */
+
             for (int i = inPer; i < x - 1 - inPer; i++) {
                 result[inPer][i] = count++;
             }
